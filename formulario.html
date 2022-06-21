@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para contato</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form id="my-form" action="https://formspree.io/f/meqnwakw" method="post">
+
+            <h3>Entre em contato com a gente</h3> <br>
+            <p>Deixe seu comentário!</p> <br>
+
+            <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" name="no" id="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" max="11" required>
+            </div>
+
+            <div class="campo">
+                <label for="Assunto">Asssunto</label>
+                <select name="Asssunto" id="Asssunto">
+                    <option></option>
+                    <option>Critíca</option>
+                    <option>Elogio</option>
+                    <option>Curiosidade</option>
+                    <option>Sugestão</option>
+
+                </select>
+
+            </div>
+
+            <div class="campo">
+                <label class="mov" for="mensagem">Mensagem:
+                    <span id="maximo"> ( <b id="caracteres">250</b> caracteres)</span> <br>
+                </label>
+                <textarea name="mensagem" id="mensagem" maxlength="250" cols="20" rows="5"></textarea>
+            </div>
+
+
+            <button class="btn" type="submit"> ENVIAR </button>
+            <p id="my-form-status"></p>
+
+        </form>
+    </div>
+    <script src="js/vanilla-masker.min.js"></script>
+
+    <script src="js/js-form.js"></script>
+
+</body>
+
+</html>
